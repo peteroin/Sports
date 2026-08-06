@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProGear India · Sports Equipment</title>
+  <!-- Font Awesome Free -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f8fafc;
+      color: #0b1e33;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ----- header / navigation ----- */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid #e6edf5;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0b1e33;
+    }
+
+    .logo i {
+      color: #e84c3d;
+      margin-right: 8px;
+      transform: rotate(-8deg);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-weight: 500;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1e2f44;
+      font-size: 0.95rem;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #e84c3d;
+      border-bottom-color: #e84c3d;
+    }
+
+    .header-contact {
+      display: flex;
+      gap: 16px;
+      font-size: 0.85rem;
+      color: #2d4058;
+      background: #f0f4fc;
+      padding: 6px 16px;
+      border-radius: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .header-contact a {
+      color: #2d4058;
+      text-decoration: none;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .header-contact a:hover {
+      color: #e84c3d;
+    }
+
+    .header-contact i {
+      color: #e84c3d;
+      width: 16px;
+    }
+
+    /* ----- sections ----- */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 2.7rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      color: #0b1e33;
+    }
+
+    .section-sub {
+      font-size: 1.2rem;
+      color: #3b4d66;
+      max-width: 640px;
+      margin-bottom: 48px;
+    }
+
+    /* ----- hero / homepage ----- */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .hero-content {
+      flex: 1 1 380px;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      color: #0b1e33;
+    }
+
+    .hero-content h1 span {
+      color: #e84c3d;
+      background: linear-gradient(145deg, #d43f31, #e84c3d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #3b4d66;
+      margin: 24px 0 32px;
+      max-width: 480px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #e84c3d;
+      color: white;
+      padding: 14px 36px;
+      border-radius: 60px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+      box-shadow: 0 8px 24px rgba(232, 76, 61, 0.25);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #1e2f44;
+      box-shadow: none;
+      border: 1.5px solid #cdd9e9;
+    }
+
+    .btn-outline:hover {
+      background: #f2f6fd;
+      border-color: #e84c3d;
+    }
+
+    .btn:hover {
+      background: #c73d2f;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(232, 76, 61, 0.35);
+    }
+
+    .hero-image {
+      flex: 1 1 380px;
+      background: linear-gradient(145deg, #eef3fa, #dfe8f3);
+      border-radius: 60px 60px 60px 20px;
+      padding: 30px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 260px;
+      box-shadow: 0 20px 40px -12px rgba(0, 20, 40, 0.12);
+    }
+
+    .hero-image i {
+      font-size: 8rem;
+      color: #e84c3d;
+      opacity: 0.7;
+      filter: drop-shadow(0 8px 12px rgba(232, 76, 61, 0.2));
+    }
+
+    /* stats */
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid #dce5ef;
+    }
+
+    .stat-item {
+      text-align: center;
+      flex: 1 1 100px;
+    }
+
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0b1e33;
+    }
+
+    .stat-label {
+      color: #4a5f7a;
+      font-size: 0.95rem;
+    }
+
+    /* ----- about ----- */
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-text {
+      flex: 1 1 340px;
+    }
+
+    .about-text h3 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #0b1e33;
+    }
+
+    .about-text p {
+      color: #2d4058;
+      margin-bottom: 20px;
+    }
+
+    .about-icon {
+      flex: 1 1 240px;
+      background: #eef4fc;
+      border-radius: 60px;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.02);
+    }
+
+    .about-icon i {
+      font-size: 6rem;
+      color: #e84c3d;
+      opacity: 0.65;
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 24px;
+    }
+
+    .about-list li {
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 500;
+    }
+
+    .about-list i {
+      color: #e84c3d;
+      width: 24px;
+      font-size: 1.2rem;
+    }
+
+    /* ----- services ----- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px;
+      margin-top: 20px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 36px 24px;
+      border-radius: 32px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.02);
+      border: 1px solid #e7eef7;
+      transition: all 0.25s;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px -12px rgba(232, 76, 61, 0.12);
+      border-color: #f9cbc4;
+    }
+
+    .service-card i {
+      font-size: 3.2rem;
+      color: #e84c3d;
+      margin-bottom: 20px;
+      background: #fef0ed;
+      padding: 16px;
+      border-radius: 60px;
+      width: 80px;
+      height: 80px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .service-card h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #0b1e33;
+    }
+
+    .service-card p {
+      color: #3b4d66;
+      font-size: 0.95rem;
+    }
+
+    /* ----- products ----- */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 28px;
+      margin-top: 20px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 28px;
+      padding: 24px 16px;
+      text-align: center;
+      border: 1px solid #e7eef7;
+      transition: 0.25s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(232, 76, 61, 0.08);
+      border-color: #f9cbc4;
+    }
+
+    .product-card i {
+      font-size: 3rem;
+      color: #e84c3d;
+      margin-bottom: 12px;
+    }
+
+    .product-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .product-card .price {
+      color: #e84c3d;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    /* ----- testimonials ----- */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 32px 24px;
+      border-radius: 28px;
+      border: 1px solid #e7eef7;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .testimonial-card i {
+      color: #e84c3d;
+      font-size: 1.8rem;
+      opacity: 0.3;
+      margin-bottom: 12px;
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      color: #2d4058;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-card .author {
+      font-weight: 600;
+      color: #0b1e33;
+    }
+
+    .testimonial-card .role {
+      color: #6a7f9a;
+      font-size: 0.9rem;
+    }
+
+    /* ----- blog ----- */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .blog-card {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid #e7eef7;
+      transition: 0.25s;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+    }
+
+    .blog-card .blog-img {
+      background: #eef3fa;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 2.8rem;
+      color: #e84c3d;
+    }
+
+    .blog-card .blog-body {
+      padding: 20px 24px 24px;
+    }
+
+    .blog-card .blog-body h4 {
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .blog-card .blog-body p {
+      color: #4a5f7a;
+      font-size: 0.95rem;
+    }
+
+    .blog-card .blog-body .tag {
+      display: inline-block;
+      background: #fef0ed;
+      color: #e84c3d;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 40px;
+      margin-top: 12px;
+    }
+
+    /* ----- contact ----- */
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      margin-top: 20px;
+    }
+
+    .contact-info {
+      flex: 1 1 300px;
+    }
+
+    .contact-info h3 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      color: #3b4d66;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contact-info i {
+      color: #e84c3d;
+      width: 28px;
+      font-size: 1.2rem;
+    }
+
+    .contact-form {
+      flex: 1 1 380px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 16px;
+      border: 1px solid #dce5ef;
+      font-family: inherit;
+      font-size: 1rem;
+      margin-bottom: 16px;
+      background: white;
+      transition: 0.2s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #e84c3d;
+      box-shadow: 0 0 0 3px rgba(232, 76, 61, 0.08);
+    }
+
+    .contact-form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .contact-form .btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* ----- contact bar ----- */
+    .contact-bar {
+      background: #0b1e33;
+      color: white;
+      padding: 28px 0;
+    }
+
+    .contact-bar .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .contact-bar a {
+      color: #b6cae5;
+      text-decoration: none;
+      font-size: 1.05rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: 0.2s;
+    }
+
+    .contact-bar a:hover {
+      color: white;
+    }
+
+    .contact-bar i {
+      font-size: 1.4rem;
+      color: #e84c3d;
+      width: 28px;
+    }
+
+    /* ----- footer ----- */
+    footer {
+      background: #0b1e33;
+      color: #b6cae5;
+      padding: 48px 0 32px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+
+    .footer-col p,
+    .footer-col a {
+      color: #b6cae5;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .footer-col i {
+      width: 24px;
+      color: #e84c3d;
+      margin-right: 6px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #233d58;
+      padding-top: 24px;
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #8aa3c4;
+    }
+
+    /* responsive */
+    @media (max-width: 768px) {
+      .header-contact {
+        font-size: 0.75rem;
+        padding: 4px 12px;
+        gap: 10px;
+      }
+      .nav-links {
+        gap: 14px;
+        font-size: 0.9rem;
+      }
+      .hero-content h1 {
+        font-size: 2.4rem;
+      }
+      .section-title {
+        font-size: 2.2rem;
+      }
+      .about-grid {
+        flex-direction: column-reverse;
+      }
+      .stats {
+        justify-content: center;
+      }
+      .contact-bar .container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <i class="fas fa-football-ball"></i> ProGear India
+        </div>
+        <div class="nav-links">
+          <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
+          <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+          <a href="#services"><i class="fas fa-dumbbell"></i> Services</a>
+          <a href="#products"><i class="fas fa-shopping-bag"></i> Products</a>
+          <a href="#testimonials"><i class="fas fa-star"></i> Testimonials</a>
+          <a href="#blog"><i class="fas fa-pen-fancy"></i> Blog</a>
+          <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+        <div class="header-contact">
+          <a href="tel:+919999999999"><i class="fas fa-phone-alt"></i> +91 99999 99999</a>
+          <a href="mailto:info@progear.in"><i class="fas fa-envelope"></i> info@progear.in</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home">
+      <div class="container">
+        <div class="hero">
+          <div class="hero-content">
+            <h1>Gear up for <span>victory</span> in India</h1>
+            <p>Premium sports equipment for athletes, teams, and fitness enthusiasts — from the field to the gym. Made for Indian champions.</p>
+            <div class="btn-group">
+              <a href="#products" class="btn"><i class="fas fa-arrow-right"></i> Shop now</a>
+              <a href="#about" class="btn btn-outline"><i class="fas fa-flag"></i> Our story</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <i class="fas fa-cricket"></i>
+          </div>
+        </div>
+
+        <!-- stats -->
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-number">12+</div>
+            <div class="stat-label">Years in India</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">150+</div>
+            <div class="stat-label">Cities served</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">99%</div>
+            <div class="stat-label">Performance rate</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Expert support</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" style="background: #f2f7fe;">
+      <div class="container">
+        <h2 class="section-title">Built for Indian champions</h2>
+        <p class="section-sub">We’re athletes, engineers, and coaches — united by a passion for high‑performance equipment, Made in India.</p>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <h3>From the ground up</h3>
+            <p>ProGear India was born on the cricket pitch, the football field, and the kabaddi mat. Since 2014, we’ve designed gear that meets the demands of elite competitors and weekend warriors across the country.</p>
+            <p>Every product is tested in real Indian conditions, so you can focus on your game — not your gear.</p>
+            <ul class="about-list">
+              <li><i class="fas fa-check-circle"></i> Pro‑tested materials</li>
+              <li><i class="fas fa-check-circle"></i> Sustainable manufacturing</li>
+              <li><i class="fas fa-check-circle"></i> Lifetime warranty</li>
+            </ul>
+          </div>
+          <div class="about-icon">
+            <i class="fas fa-trophy"></i>
+            <p style="margin-top: 16px; font-weight: 600; color: #0b1e33;">Trusted by 150+ clubs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <h2 class="section-title">Equipment services</h2>
+        <p class="section-sub">From team gear to personal training equipment — we deliver quality, durability, and performance across India.</p>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-cricket"></i>
+            <h3>Cricket &amp; Batting</h3>
+            <p>Bats, pads, gloves, helmets, and training aids for every cricketer from gully to international.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-futbol"></i>
+            <h3>Football &amp; Team Sports</h3>
+            <p>Football, volleyball, basketball, and kabaddi equipment — balls, nets, protective gear.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-dumbbell"></i>
+            <h3>Strength &amp; Fitness</h3>
+            <p>Free weights, racks, resistance bands, and cardio machines for every training level.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-swimmer"></i>
+            <h3>Aquatics &amp; Outdoor</h3>
+            <p>Swim caps, goggles, buoyancy aids, and outdoor adventure gear for all conditions.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-helmet-safety"></i>
+            <h3>Protective &amp; Safety</h3>
+            <p>Helmets, pads, mouthguards, and high‑visibility apparel for contact sports.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-tools"></i>
+            <h3>Custom &amp; Repair</h3>
+            <p>On‑site equipment maintenance, custom branding, and performance tuning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" style="background: #f2f7fe;">
+      <div class="container">
+        <h2 class="section-title">Bestselling gear in India</h2>
+        <p class="section-sub">Shop our most popular equipment — trusted by pros and amateurs alike across the country.</p>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <i class="fas fa-cricket"></i>
+            <h4>Pro Cricket Bat</h4>
+            <p class="price">₹4,999</p>
+          </div>
+          <div class="product-card">
+            <i class="fas fa-futbol"></i>
+            <h4>Match Football</h4>
+            <p class="price">₹1,499</p>
+          </div>
+          <div class="product-card">
+            <i class="fas fa-dumbbell"></i>
+            <h4>Adjustable Dumbbell</h4>
+            <p class="price">₹6,999</p>
+          </div>
+          <div class="product-card">
+            <i class="fas fa-swimmer"></i>
+            <h4>Pro Swim Goggles</h4>
+            <p class="price">₹1,999</p>
+          </div>
+          <div class="product-card">
+            <i class="fas fa-helmet-safety"></i>
+            <h4>Impact Helmet</h4>
+            <p class="price">₹7,999</p>
+          </div>
+          <div class="product-card">
+            <i class="fas fa-running"></i>
+            <h4>Speed Spikes</h4>
+            <p class="price">₹3,499</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+      <div class="container">
+        <h2 class="section-title">What Indian athletes say</h2>
+        <p class="section-sub">Real feedback from the people who trust ProGear India every day.</p>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-left"></i>
+            <p>"ProGear’s equipment has completely elevated my training. The durability and feel are unmatched for Indian conditions."</p>
+            <div class="author">— Priya S.</div>
+            <div class="role">Marathon Runner, Mumbai</div>
+          </div>
+          <div class="testimonial-card">
+            <i class="fas fa-quote-left"></i>
+            <p>"We outfitted our entire team with ProGear. The performance gains were immediate. Highly recommend to any club."</p>
+            <div class="author">— Coach Ravi</div>
+            <div class="role">Football, Delhi FC</div>
+          </div>
+          <div class="testimonial-card">
+            <i class="fas fa-quote-left"></i>
+            <p>"I’ve tried many brands, but ProGear is the only one that holds up to my intense training schedule in the heat."</p>
+            <div class="author">— Arjun R.</div>
+            <div class="role">CrossFit Athlete, Bengaluru</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" style="background: #f2f7fe;">
+      <div class="container">
+        <h2 class="section-title">From the blog</h2>
+        <p class="section-sub">Tips, stories, and insights from the ProGear India community.</p>
+
+        <div class="blog-grid">
+          <div class="blog-card">
+            <div class="blog-img"><i class="fas fa-cricket"></i></div>
+            <div class="blog-body">
+              <h4>5 Drills to Improve Your Batting</h4>
+              <p>Expert techniques to boost your timing and power at the crease.</p>
+              <span class="tag">Cricket</span>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="blog-img"><i class="fas fa-dumbbell"></i></div>
+            <div class="blog-body">
+              <h4>How to Choose the Right Dumbbell</h4>
+              <p>Your complete guide to selecting weights for strength goals.</p>
+              <span class="tag">Fitness</span>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="blog-img"><i class="fas fa-futbol"></i></div>
+            <div class="blog-body">
+              <h4>Football Training in Indian Heat</h4>
+              <p>Stay safe and perform better with these pro tips for hot weather.</p>
+              <span class="tag">Football</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Get in touch</h2>
+        <p class="section-sub">Have questions? Reach out — we’re here to help you perform at your best.</p>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Contact details</h3>
+            <p><i class="fas fa-map-pin"></i> 22, Sports Complex, Jawaharlal Nehru Stadium, New Delhi – 110003</p>
+            <p><i class="fas fa-phone-alt"></i> +91 99999 99999</p>
+            <p><i class="fas fa-envelope"></i> info@progear.in</p>
+            <p><i class="fas fa-clock"></i> Mon–Sat: 9am – 9pm IST</p>
+            <p style="margin-top: 20px; color: #0b1e33;"><strong>Demo address, phone &amp; email for illustration.</strong></p>
+          </div>
+          <div class="contact-form">
+            <form onsubmit="alert('Thank you! This is a demo form.'); return false;">
+              <input type="text" placeholder="Your name" required />
+              <input type="email" placeholder="Email address" required />
+              <input type="text" placeholder="Subject" />
+              <textarea placeholder="Your message…" required></textarea>
+              <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONTACT BAR -->
+  <div class="contact-bar">
+    <div class="container">
+      <a href="#"><i class="fas fa-map-pin"></i> 22, Sports Complex, Jawaharlal Nehru Stadium, New Delhi – 110003</a>
+      <a href="tel:+919999999999"><i class="fas fa-phone-alt"></i> +91 99999 99999</a>
+      <a href="mailto:info@progear.in"><i class="fas fa-envelope"></i> info@progear.in</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4><i class="fas fa-football-ball"></i> ProGear India</h4>
+          <p>High‑performance equipment for every sport.</p>
+          <p style="margin-top: 12px;"><i class="fas fa-map-pin"></i> 22, Sports Complex, Jawaharlal Nehru Stadium</p>
+          <p><i class="fas fa-city"></i> New Delhi – 110003</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick links</h4>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#products">Products</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+          <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:info@progear.in"><i class="fas fa-envelope"></i> info@progear.in</a>
+          <a href="tel:+919999999999"><i class="fas fa-phone"></i> +91 99999 99999</a>
+          <a href="#"><i class="fas fa-map-pin"></i> New Delhi, India</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 ProGear India. All rights reserved. | Demo address, phone &amp; email for illustration.
+      </div>
+    </div>
+  </footer>
+
+  <!-- active nav scroll -->
+  <script>
+    (function() {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-links a');
+
+      function updateActive() {
+        let current = '';
+        sections.forEach(section => {
+          const top = section.offsetTop - 160;
+          if (window.scrollY >= top) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActive);
+      window.addEventListener('load', updateActive);
+    })();
+  </script>
+</body>
+</html>
